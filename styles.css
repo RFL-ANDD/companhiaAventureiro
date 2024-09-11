@@ -61,7 +61,7 @@ section button:hover {
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
+    width: 80rem; /* Largura máxima da caixa de resultados */
     height: 46vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
@@ -70,8 +70,9 @@ section button:hover {
 }
 
 /* Estiliza cada item de resultado */
-.item-resultado {
+.item-resultado {   
     background: #FFFFFF; /* Cor de fundo dos itens */
+    /*height: 100%;*/
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
@@ -95,10 +96,90 @@ section button:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
+/* Estiliza box título */
+.titulo-resultado {   
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    /*background-color: blue; /* Cor de destaque para debug*/
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+}
+
+/* Estiliza os títulos dentro do título resultado */
+.titulo-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
+}
+
+/* Estiliza os links dentro do título resultado */
+.titulo-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #30475E; /* Cor do texto dos links */
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.titulo-resultado a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estiliza o embedded code spotify dentro dos itens de resultado */
+.embedded-meta{
+    /*background-color: green;/* Cor de destaque para debug*/
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 40%;
+    width: 33%;
     color: #45474B; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+/* Estiliza o link embedded code spotify dentro dos itens de resultado */
+.embedded-meta p{
+    color: #45474B; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    /*background-color: red; /* Cor de destaque para debug*/
+    position: relative;
+    top: -38%;
+    left: 35%;
+    width: 60%;
+    height: 50%;
+}
+
+/* Estiliza os parágrafos descrição meta dentro dos itens de resultado */
+.descricao-meta p {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    color: #45474B; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+/* Estiliza campo para links */
+.links-meta {
+    /*background-color: yellow; /* Cor de destaque para debug*/
+    width: 95%;
+    position: relative;
+    top: -30%;
+    text-align: center;
+    color: #45474B; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+/* Estiliza os links dentro do links-meta */
+.links-meta a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #30475E; /* Cor do texto dos links */
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.links.meta a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* Estiliza o rodapé da página */

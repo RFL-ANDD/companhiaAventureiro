@@ -1,4 +1,38 @@
 //dados recebidos a partir de dados.js
+//função loadRecentContent() - Carrega página principal com os 5 episódios mais novos
+function loadRecentContent() {
+    //definine section resultados
+    let section = document.getElementById('resultados-pesquisa');
+    console.log("Executou all()");
+    //inicializa string para armazenar resultados
+    let resultados = '';
+    //itera cada elementos em dados.js
+    for (let i=0; i<5 && i<dados.length; i++) {
+        let dado = dados[i];
+        resultados += `
+            <div class="item-resultado">
+                <div class="titulo-resultado">
+                    <h2>
+                        <a href="#" target="_blank">${dado.titulo}</a>
+                    </h2>
+                </div>
+                <div class="embedded-meta">
+                    <p class="embedded-meta">${dado.plugin}</p>
+                </div>
+                <div class="descricao-meta">
+                    <p class="descricao-meta">${dado.descricao}</p>
+                </div>
+                <div class="links-meta">
+                    <a href=${dado.link} target="_blank">Ouça no spotify</a>
+                </div>
+            </div>
+        `
+    //final instrução for
+    }
+    //Preenche HTML com resultados de pesquisa
+    section.innerHTML = resultados;
+}
+//final função loadRecentCOntent()
 //função pesquisar()
 function pesquisar() {
     //definine section resultados
@@ -31,12 +65,21 @@ function pesquisar() {
             //Cria elemento HTML
             resultados += `
                 <div class="item-resultado">
-                <h2>
-                    <a href="#" target="_blank">${dado.titulo}</a>
-                </h2>
-                <p class="descricao-meta">${dado.descricao}</p>
-                <a href=${dado.link} target="_blank">Ouça no spotify</a>
-            </div>
+                    <div class="titulo-resultado">
+                        <h2>
+                            <a href="#" target="_blank">${dado.titulo}</a>
+                        </h2>
+                    </div>
+                    <div class="embedded-meta">
+                        <p class="embedded-meta">${dado.plugin}</p>
+                    </div>
+                    <div class="descricao-meta">
+                        <p class="descricao-meta">${dado.descricao}</p>
+                    </div>
+                    <div class="links-meta">
+                        <a href=${dado.link} target="_blank">Ouça no spotify</a>
+                    </div>
+                </div>
             `
         //final instrução if
         }
